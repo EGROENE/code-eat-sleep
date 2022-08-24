@@ -90,3 +90,7 @@ button:not(:disabled):not(.disabled) {
     background-color: #495fef;
     border-color: #495fef;
 }
+
+.round-pill {
+    border-radius: 50rem;
+}
