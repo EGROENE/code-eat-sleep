@@ -26,3 +26,12 @@ a {
     text-decoration: none;
     background-color: transparent;
 }
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--color-headings);
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+}
