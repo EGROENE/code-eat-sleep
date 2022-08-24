@@ -62,3 +62,19 @@ button {
     margin: 0;
     padding: 0;
 }
+
+.btn {
+    font-weight: 700;
+    min-width: 175px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-transform: uppercase;
+    letter-spacing: 1.63px;
+    transition: 0.4s;
+    height: 65px;
+    padding-left: 35px;
+    padding-right: 30px;
+    box-shadow: 0 32px 54px rgba(3, 3, 3, 0.12);
+}
