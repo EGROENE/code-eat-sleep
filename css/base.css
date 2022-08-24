@@ -20,3 +20,9 @@ body {
     background-color: var(--bg);
     text-align: left;
 }
+
+a {
+    color: #495fef;
+    text-decoration: none;
+    background-color: transparent;
+}
