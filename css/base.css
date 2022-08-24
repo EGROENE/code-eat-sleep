@@ -1,0 +1,11 @@
+section,
+footer,
+header,
+main,
+nav {
+    display: block;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
