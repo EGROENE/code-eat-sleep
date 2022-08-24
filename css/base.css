@@ -83,3 +83,10 @@ button {
 button:not(:disabled):not(.disabled) {
     cursor: pointer;
 }
+
+.btn-primary,
+.btn-primary a {
+    color: #fff;
+    background-color: #495fef;
+    border-color: #495fef;
+}
