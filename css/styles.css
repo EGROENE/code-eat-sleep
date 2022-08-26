@@ -36,8 +36,8 @@
     padding: 1rem;
     transition: all 0.35s ease-in;
     background: white;
-    /* visibility: hidden;
-    opacity: 0; */
+    visibility: hidden;
+    opacity: 0;
 }
 
 .modal-header {
@@ -54,4 +54,9 @@
 .modal-header .fa-times:hover {
     transition: scale(1.1);
     cursor: pointer;
+}
+
+.full-site-modal.is-visible {
+    visibility: visible;
+    opacity: 1;
 }
