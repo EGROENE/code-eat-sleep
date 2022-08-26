@@ -12,3 +12,10 @@ for (const elem of openModal) {
         document.getElementById(modalId.classList.add(isVisible)); // this adds .is-visible as a class to everything in document with id 'modalId'
     })
 }
+
+// Remove isVisible class from elements in HTML with data-close attribute upon click:
+for (const elem of closeModal) {
+    elem.addEventListener('click', function() {
+        this.parentElement.parentElement.classList.remove(isVisible);
+    })
+}
