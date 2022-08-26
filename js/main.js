@@ -9,7 +9,7 @@ const closeModal = document.querySelectorAll(modalClose);
 for (const elem of openModal) {
     elem.addEventListener('click', function() {
         const modalId = this.dataset.open; // this refers to parent element, which is elem here. It then accesses datasets that are followed by 'open'. Don't use arrow func here, so that this keyword works.
-        document.getElementById(modalId.classList.add(isVisible)); // this adds .is-visible as a class to everything in document with id 'modalId'
+        document.getElementById(about.classList.add(isVisible)); // this adds .is-visible as a class to everything in document with data-open="about"
     })
 }
 
