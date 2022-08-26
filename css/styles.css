@@ -35,9 +35,11 @@
     right: 0;
     padding: 1rem;
     transition: all 0.35s ease-in;
+    background: white;
 }
 
 .modal-header {
     display: flex;
     padding-bottom: 1rem;
+    justify-content: space-between;
 }
