@@ -36,10 +36,22 @@
     padding: 1rem;
     transition: all 0.35s ease-in;
     background: white;
+    /* visibility: hidden;
+    opacity: 0; */
 }
 
 .modal-header {
     display: flex;
     padding-bottom: 1rem;
     justify-content: space-between;
+}
+
+.modal-header .fa-times {
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in;
+}
+
+.modal-header .fa-times:hover {
+    transition: scale(1.1);
+    cursor: pointer;
 }
