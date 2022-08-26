@@ -26,3 +26,13 @@
     cursor: pointer;
     text-transform: lowercase;
 }
+
+.full-site-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    transition: all 0.35s ease-in;
+}
