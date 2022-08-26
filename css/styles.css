@@ -36,3 +36,8 @@
     padding: 1rem;
     transition: all 0.35s ease-in;
 }
+
+.modal-header {
+    display: flex;
+    padding-bottom: 1rem;
+}
