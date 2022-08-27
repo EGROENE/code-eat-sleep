@@ -30,6 +30,12 @@
     color: var(--color-text);
 }
 
+.code-icon .fa-code {
+    font-size: 2rem;
+    display: inline-block;
+    line-height: 1.5;
+}
+
 .main-menu {
     display: flex;
 }
