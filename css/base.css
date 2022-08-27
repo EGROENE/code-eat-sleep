@@ -55,6 +55,7 @@ button {
 
 .container {
     max-width: 1140px;
+    text-align: center;
 }
 
 .ul-default-none {
@@ -96,7 +97,6 @@ button:not(:disabled):not(.disabled) {
 
 .header-large {
     font-size: 5rem;
-    letter-spacing: -2.5rem;
     line-height: 1.05;
 }
 
