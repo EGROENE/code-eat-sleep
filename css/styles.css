@@ -15,6 +15,11 @@
     line-height: 1.42;
 }
 
+.hero-content {
+    text-align: center;
+    padding: 5.5rem 0;
+}
+
 .main-menu {
     display: flex;
 }
