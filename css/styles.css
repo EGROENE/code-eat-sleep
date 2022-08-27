@@ -20,6 +20,16 @@
     padding: 5.5rem 0;
 }
 
+.code-icon {
+    background-color: #da5252;
+    padding: 1.25rem 1.5rem;
+    border-radius: 50rem;
+    display: inline-block;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    color: var(--color-text);
+}
+
 .main-menu {
     display: flex;
 }
