@@ -79,6 +79,12 @@
     transition: 0.4s;
     pointer-events: none;
 }
+
+/* To mirror the icon when tab opens */
+.theme-panel.open .theme-tab i {
+    transform: scaleX(-1);
+}
+
 .navbar {
     display: flex;
     width: 100%;
