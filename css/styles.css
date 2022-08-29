@@ -1,3 +1,16 @@
+.theme-panel {
+    position: fixed;
+    right: 0;
+    top: 25%;
+    z-index: 100;
+    transition: 0.4s;
+    transform: translateX(100%);
+}
+
+.theme-panel.open {
+    transform: translateX(0);
+}
+
 .navbar {
     display: flex;
     width: 100%;
