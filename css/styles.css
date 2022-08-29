@@ -11,6 +11,15 @@
     transform: translateX(0);
 }
 
+.theme-body {
+    background-color: #495fef;
+    border: 0;
+    max-width: 185px;
+    padding: 15px 13px;
+    text-align: center;
+    border-bottom-left-radius: 25px;
+}
+
 .navbar {
     display: flex;
     width: 100%;
