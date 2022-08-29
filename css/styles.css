@@ -31,6 +31,15 @@
     display: inline-flex;
 }
 
+.theme-body .btn-group {
+    box-shadow: 12px 34px rgba(22, 28, 45, 0.7);
+    border-radius: 33px;
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    max-width: 153px;
+}
+
 .navbar {
     display: flex;
     width: 100%;
