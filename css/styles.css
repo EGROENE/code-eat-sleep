@@ -32,7 +32,7 @@
 }
 
 .theme-body .btn-group {
-    box-shadow: 12px 34px rgba(22, 28, 45, 0.7);
+    /* box-shadow: 12px 34px rgba(22, 28, 45, 0.7); */
     border-radius: 33px;
     background-color: white;
     overflow: hidden;
@@ -52,10 +52,10 @@
     letter-spacing: 1.4px;
     text-transform: uppercase;
 }
-
-.theme-body .btn-group .switcher-btn:active {
+/* 
+.theme-body .btn-group .switcher-btn.active {
     background-color: #ced4e7;
-}
+} */
 
 .navbar {
     display: flex;
