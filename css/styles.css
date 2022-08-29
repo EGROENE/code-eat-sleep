@@ -21,6 +21,16 @@
     position: relative;
 }
 
+.theme-body > span {
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: -0.09;
+    line-height: 26px;
+    padding-bottom: 8px;
+    display: inline-flex;
+}
+
 .navbar {
     display: flex;
     width: 100%;
