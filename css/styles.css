@@ -151,6 +151,12 @@
     right: 10px;
 }
 
+.portfolio-filter-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 2rem 0;
+}
+
 .main-menu {
     display: flex;
 }
