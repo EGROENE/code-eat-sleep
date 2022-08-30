@@ -23,6 +23,24 @@ const currentTheme = localStorage.getItem(theme);
 const openModal = document.querySelectorAll(modalOpen);
 const closeModal = document.querySelectorAll(modalClose);
 
+const setActive = (elem, selector) => {
+    if (document.querySelector(`${selector}.${active}`) !== null) {
+        document.querySelector(`${selector}.${active}`).classList.remove(active);
+    } else {
+        elem.classList.add(active);
+    }
+}
+
+const setTheme = (val) => {
+    if (val === dark) {
+        root.setAttribute(dataTheme, dark);
+        localStorage.setItem(theme, dark);
+    } else {
+        root.setAttribute(dataTheme, light);
+        localStorage.setItem(theme, light);
+    }
+}
+
 toggleTheme.addEventListener('click', function() {
     const tab = this.parentElement.parentElement;
     if (!tab.className.includes(open)) {
@@ -31,6 +49,15 @@ toggleTheme.addEventListener('click', function() {
         tab.classList.remove(open);
     }
 })
+
+for (const elem of switcher) {
+    elem.addEventListener('click', function() {
+        const toggle = this.dataset.toggle; // dataset corresponds to data in data-toggle
+        // set active state:
+        setActive(elem, switcherBtn);
+        setTheme(toggle);
+    })
+}
 
 // Full site modal 'open buttons'
 for (const elem of openModal) {
