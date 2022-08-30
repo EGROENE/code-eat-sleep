@@ -1,3 +1,13 @@
+// vars related to toggling light/dark themes:
+const theme = 'theme';
+const dataTheme = 'data-theme';
+const themeTab = '.theme-tab';
+const switcherBtn = '.switcher-btn';
+const dark = 'dark';
+const light = 'light';
+const open = 'open';
+const active = 'active';
+
 const modalOpen = '[data-open]';
 const modalClose = '[data-close]';
 const isVisible = 'is-visible';
