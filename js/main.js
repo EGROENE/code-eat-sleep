@@ -15,6 +15,11 @@ const isVisible = 'is-visible';
 // var to store value of page root:
 const root = document.documentElement;
 
+// THEME
+const toggleTheme = document.querySelector(themeTab);
+const switcher = document.querySelectorAll(switcherBtn); // querySelectorAll returns all elements w/ given class & puts them into an array (like getElementsByClassName)
+const currentTheme = localStorage.getItem(theme);
+
 const openModal = document.querySelectorAll(modalOpen);
 const closeModal = document.querySelectorAll(modalClose);
 
