@@ -18,7 +18,7 @@ const root = document.documentElement;
 // THEME
 const toggleTheme = document.querySelector(themeTab);
 const switcher = document.querySelectorAll(switcherBtn); // querySelectorAll returns all elements w/ given class & puts them into an array (like getElementsByClassName)
-const currentTheme = localStorage.getItem(theme);
+const currentTheme = localStorage.getItem(theme); // theme that the user sets is saved
 
 const openModal = document.querySelectorAll(modalOpen);
 const closeModal = document.querySelectorAll(modalClose);
@@ -38,6 +38,19 @@ const setTheme = (val) => {
     } else {
         root.setAttribute(dataTheme, light);
         localStorage.setItem(theme, light);
+    }
+}
+
+if (currentTheme) {
+    root.setAttribute(dataTheme, currentTheme);
+    switcher.forEach((btn) => {
+        btn.classList.remove(active);
+    })
+
+    if (currentTheme === dark) {
+        switcher[1].classList.add(active); // dark btn to active
+    } else {
+        switcher[0].classList.add(active); // light btn to active
     }
 }
 
