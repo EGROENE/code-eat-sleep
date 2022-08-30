@@ -23,6 +23,15 @@ const currentTheme = localStorage.getItem(theme);
 const openModal = document.querySelectorAll(modalOpen);
 const closeModal = document.querySelectorAll(modalClose);
 
+toggleTheme.addEventListener('click', function() {
+    const tab = this.parentElement.parentElement;
+    if (!tab.className.includes(open)) {
+        tab.classList.add(open);
+    } else {
+        tab.classList.remove(open);
+    }
+})
+
 // Full site modal 'open buttons'
 for (const elem of openModal) {
     elem.addEventListener('click', function() {
