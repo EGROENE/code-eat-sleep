@@ -181,3 +181,7 @@
 [data-animation = "zoomInOut"].full-site-modal.is-visible {
     transform: none;
 }
+
+.search-container {
+    text-align: left;
+}
