@@ -123,6 +123,16 @@
     line-height: 1.5;
 }
 
+.search-container {
+    text-align: left;
+}
+
+.search-container label {
+    align-items: center;
+    position: relative;
+    display: inline-flex;
+}
+
 .main-menu {
     display: flex;
 }
@@ -180,8 +190,4 @@
 
 [data-animation = "zoomInOut"].full-site-modal.is-visible {
     transform: none;
-}
-
-.search-container {
-    text-align: left;
 }
