@@ -12,7 +12,7 @@ const modalOpen = '[data-open]';
 const modalClose = '[data-close]';
 const isVisible = 'is-visible';
 
-const filterLink = '[data-filter]';
+const dataFilter = '[data-filter]';
 
 // var to store value of page root:
 const root = document.documentElement;
@@ -22,6 +22,10 @@ const toggleTheme = document.querySelector(themeTab);
 const switcher = document.querySelectorAll(switcherBtn); // querySelectorAll returns all elements w/ given class & puts them into an array (like getElementsByClassName)
 const currentTheme = localStorage.getItem(theme); // theme that the user sets is saved
 
+// PORTFOLIO
+const filterLink = document.querySelectorAll(dataFilter);
+
+// MODAL
 const openModal = document.querySelectorAll(modalOpen);
 const closeModal = document.querySelectorAll(modalClose);
 
