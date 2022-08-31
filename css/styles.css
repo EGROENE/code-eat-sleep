@@ -201,6 +201,7 @@
     transition: 0.4s;
     z-index: 100;
     padding: 1.25rem 1.875rem;
+    opacity: 0;
 }
 
 /* If bg opacity is added here, only bg is opacitated, not everything else in box, which would happen if added in .card-popup-box */
@@ -215,6 +216,11 @@
     z-index: -100;
     opacity: 0.9;
     border-radius: 8px;
+}
+
+.portfolio-card:hover .card-popup-box {
+    bottom: 20px;
+    opacity: 1;
 }
 
 .card-popup-box div {
