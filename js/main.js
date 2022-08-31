@@ -26,6 +26,7 @@ const currentTheme = localStorage.getItem(theme); // theme that the user sets is
 // PORTFOLIO
 const filterLink = document.querySelectorAll(dataFilter);
 const portfolioItems = document.querySelectorAll(portfolioData);
+const searchBox = document.querySelector('#search');
 
 // MODAL
 const openModal = document.querySelectorAll(modalOpen);
