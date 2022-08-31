@@ -13,6 +13,7 @@ const modalClose = '[data-close]';
 const isVisible = 'is-visible';
 
 const dataFilter = '[data-filter]';
+const portfolioData = '[data-item]';
 
 // var to store value of page root:
 const root = document.documentElement;
@@ -24,6 +25,7 @@ const currentTheme = localStorage.getItem(theme); // theme that the user sets is
 
 // PORTFOLIO
 const filterLink = document.querySelectorAll(dataFilter);
+const portfolioItems = document.querySelectorAll(dataFilter);
 
 // MODAL
 const openModal = document.querySelectorAll(modalOpen);
