@@ -151,6 +151,10 @@
     right: 10px;
 }
 
+.portfolio-grid {
+    max-width: 1400px;
+}
+
 .portfolio-filter-nav {
     display: flex;
     flex-wrap: nowrap;
