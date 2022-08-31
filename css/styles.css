@@ -193,6 +193,17 @@
     border-radius: 8px;
 }
 
+.card-popup-box div {
+    color: var(--color-text-opacity);
+    font-size: 0.8125rem;
+    line-height: 1.63;
+    letter-spacing: 1.63px;
+    padding-bottom: 0.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    pointer-events: none;
+}
+
 .main-menu {
     display: flex;
 }
