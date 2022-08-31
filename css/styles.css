@@ -204,6 +204,15 @@
     pointer-events: none;
 }
 
+.card-popup-box h3 {
+    color: var(--color-headings);
+    font-size: 1.3125rem;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    pointer-events: none;
+    margin-bottom: 0;
+}
+
 .main-menu {
     display: flex;
 }
