@@ -190,6 +190,7 @@
     position: relative;
     margin: 0 1rem 1.85rem;
     max-width: 255px;
+    width: 100%;
 }
 
 .card-body img {
