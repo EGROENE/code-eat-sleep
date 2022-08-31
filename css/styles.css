@@ -173,6 +173,7 @@
 
 .portfolio-filter-nav .filter-link:hover {
     cursor: pointer;
+    color: #495fef;
 }
 
 .portfolio-filter-nav .filter-link:active {
