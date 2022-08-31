@@ -193,6 +193,16 @@
     border-radius: 8px;
 }
 
+.card-popup-box {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    transition: 0.4s;
+    z-index: 100;
+    padding: 1.25rem 1.875rem;
+}
+
 .card-popup-box div {
     color: var(--color-text-opacity);
     font-size: 0.8125rem;
