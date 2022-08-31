@@ -12,6 +12,8 @@ const modalOpen = '[data-open]';
 const modalClose = '[data-close]';
 const isVisible = 'is-visible';
 
+const filterLink = '[data-filter]';
+
 // var to store value of page root:
 const root = document.documentElement;
 
