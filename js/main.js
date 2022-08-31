@@ -80,6 +80,17 @@ for (const elem of switcher) {
     })
 }
 
+searchBox.addEventListener('keyup', (eventObject) => {
+    const searchInput = eventObject.target.value.toLowerCase().trim();
+    portfolioItems.forEach((card) => {
+        if (card.dataset.item.includes(searchInput)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    })
+})
+
 for (const link of filterLink) {
     link.addEventListener('click', function() {
         setActive(link, '.filter-link');
