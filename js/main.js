@@ -27,6 +27,7 @@ const currentTheme = localStorage.getItem(theme); // theme that the user sets is
 const filterLink = document.querySelectorAll(dataFilter);
 const portfolioItems = document.querySelectorAll(portfolioData);
 const searchBox = document.querySelector('#search');
+const portfolioCards = document.getElementsByClassName('portfolio-card');
 
 // MODAL
 const openModal = document.querySelectorAll(modalOpen);
@@ -105,6 +106,13 @@ for (const link of filterLink) {
             }
         })
     })
+    // If only one category is displayed while the others are hidden, change link color:
+    // Iterate thru the styles & if display: block; then change color of corresponding link
+/*     for (const card of portfolioCards) {
+        if (card.style.display === 'block') {
+            link.style.color = '#495fef';
+        }
+    } */
 }
 
 // Full site modal 'open buttons'
