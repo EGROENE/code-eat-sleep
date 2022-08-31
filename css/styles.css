@@ -203,6 +203,20 @@
     padding: 1.25rem 1.875rem;
 }
 
+/* If bg opacity is added here, only bg is opacitated, not everything else in box, which would happen if added in .card-popup-box */
+.card-popup-box:before {
+    position: absolute;
+    content: '';
+    background: var(--bg);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -100;
+    opacity: 0.9;
+    border-radius: 8px;
+}
+
 .card-popup-box div {
     color: var(--color-text-opacity);
     font-size: 0.8125rem;
