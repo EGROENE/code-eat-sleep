@@ -77,6 +77,12 @@ for (const elem of switcher) {
     })
 }
 
+for (const link of filterLink) {
+    link.addEventListener('click', function() {
+        setActive(link, '.filter-link');
+    })
+}
+
 // Full site modal 'open buttons'
 for (const elem of openModal) {
     elem.addEventListener('click', function() {
