@@ -180,6 +180,19 @@
     justify-content: center;
 }
 
+.portfolio-card {
+    position: relative;
+    margin: 0 1rem 1.85;
+    max-width: 255px;
+}
+
+.card-body {
+    width: 100%; /* occupies 100% of .portfolio-card max-width */
+    height: 255px;
+    object-fit: cover; /* autoscales the img */
+    border-radius: 8px;
+}
+
 .main-menu {
     display: flex;
 }
