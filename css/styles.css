@@ -182,11 +182,11 @@
 
 .portfolio-card {
     position: relative;
-    margin: 0 1rem 1.85;
+    margin: 0 1rem 1.85rem;
     max-width: 255px;
 }
 
-.card-body {
+.card-body img {
     width: 100%; /* occupies 100% of .portfolio-card max-width */
     height: 255px;
     object-fit: cover; /* autoscales the img */
