@@ -82,6 +82,16 @@ for (const elem of switcher) {
 for (const link of filterLink) {
     link.addEventListener('click', function() {
         setActive(link, '.filter-link');
+        const filter = this.dataset.filter;
+        portfolioItems.forEach((card) => {
+            if (filter === 'all') {
+                card.style.display = 'block';
+            } else if (card.dataset.item === filter) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        })
     })
 }
 
