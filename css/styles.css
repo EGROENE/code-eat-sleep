@@ -173,6 +173,13 @@
     color: #495fef;
 }
 
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem 1rem;
+    justify-content: center;
+}
+
 .main-menu {
     display: flex;
 }
