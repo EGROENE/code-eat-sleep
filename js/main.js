@@ -27,7 +27,32 @@ const currentTheme = localStorage.getItem(theme); // theme that the user sets is
 const filterLink = document.querySelectorAll(dataFilter);
 const portfolioItems = document.querySelectorAll(portfolioData);
 const searchBox = document.querySelector('#search');
-const portfolioCards = document.getElementsByClassName('portfolio-card');
+const portfoliCards = document.getElementsByClassName('portfolio-card');
+
+let allCardsInfo = [
+    { dataItem: 'web', imgSrc: './assets/images/portfolio-1.jpg', projectCategory: 'Web Development', projectTitle: 'Food Website' }
+]
+// Function to populate HTML, based on array of info above:
+const popCards = () => {
+    for (let i = 0; i < allCardsInfo.length; i++) {
+        document.getElementById('portfolio-grid').innerHTML +=
+            "<div class='portfolio-card' data-item="
+            + allCardsInfo[i].dataItem + ">"
+            + "<div class='card-body'>"
+            + "<img src='"
+            + allCardsInfo[i].imgSrc + "'>"
+            + "<a href='#' class='card-popup-box'>"
+            + "<div>"
+            + allCardsInfo[i].projectCategory
+            + "</div>"
+            + "<h3>"
+            + allCardsInfo[i].projectTitle
+            + "</h3>"
+            + "</a>"
+            + "</div>"
+            + "</div>"
+    }
+}
 
 // MODAL
 const openModal = document.querySelectorAll(modalOpen);
