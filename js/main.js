@@ -98,7 +98,7 @@ for (const link of filterLink) {
         const filter = this.dataset.filter;
         portfolioItems.forEach((card) => {
             if (filter === 'all') {
-                document.getElementById('all-work-link').style.color = '#495fef';
+                //document.getElementById('all-work-link').style.color = '#495fef';
                 card.style.display = 'block';
             } else if (card.dataset.item === filter) {
                 card.style.display = 'block';
