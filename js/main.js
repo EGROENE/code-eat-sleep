@@ -101,10 +101,8 @@ for (const link of filterLink) {
                 document.getElementById('all-work-link').style.color = '#495fef';
                 card.style.display = 'block';
             } else if (card.dataset.item === filter) {
-                document.getElementById('all-work-link').style.color = '#fff';
                 card.style.display = 'block';
             } else {
-                document.getElementById('all-work-link').style.color = '#fff';
                 card.style.display = 'none';
             }
         })
