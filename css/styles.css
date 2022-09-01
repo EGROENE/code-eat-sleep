@@ -181,7 +181,11 @@
 }
 
 #all-work-link {
-    color: #495fef;
+    color: red;
+}
+
+#all-work-link:hover {
+    color: #fff;
 }
 
 .portfolio-grid {
