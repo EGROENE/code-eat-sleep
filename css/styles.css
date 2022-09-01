@@ -188,7 +188,7 @@
     color: #fff;
 }
 
-.portfolio-grid {
+#portfolio-grid {
     display: flex;
     flex-wrap: wrap;
     padding: 3rem 1rem;
