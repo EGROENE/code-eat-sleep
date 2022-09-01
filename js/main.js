@@ -48,7 +48,7 @@ const popCards = () => {
             + allCardsInfo[i].dataItem + ">"
             + "<div class='card-body'>"
             + "<img src='"
-            + allCardsInfo[i].imgSrc + "'>"
+            + allCardsInfo[i].imgSrc + "' alt='portfolio-image'>"
             + "<a href='#' class='card-popup-box'>"
             + "<div>"
             + allCardsInfo[i].projectCategory
