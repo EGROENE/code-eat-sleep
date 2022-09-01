@@ -28,7 +28,7 @@ const currentTheme = localStorage.getItem(theme); // theme that the user sets is
 // PORTFOLIO
 const filterLink = document.querySelectorAll(dataFilter);
 const portfolioItems = document.querySelectorAll(portfolioData);
-const searchBox = document.querySelector('search');
+const searchBox = document.querySelector('#search');
 
 let allCardsInfo = [
     { dataItem: 'web', imgSrc: './assets/images/portfolio-1.jpg', projectCategory: 'Web Development', projectTitle: 'Food Website' },
@@ -116,16 +116,17 @@ for (const elem of switcher) {
 }
 
 // Display portfolio items based on search:
-searchBox.addEventListener('keyup', (eventObject) => {
+/* searchBox.addEventListener('keyup', (eventObject) => {
     const searchInput = eventObject.target.value.toLowerCase().trim();
     portfolioItems.forEach((card) => {
         if (card.dataset.item.includes(searchInput)) {
+            console.log('hi')
             card.style.display = 'block';
         } else {
             card.style.display = 'none';
         }
     })
-})
+}) */
 
 // Filter portfolio items based on user selection of links:
 for (const link of filterLink) {
