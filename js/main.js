@@ -28,7 +28,7 @@ const currentTheme = localStorage.getItem(theme); // theme that the user sets is
 // PORTFOLIO
 const filterLink = document.querySelectorAll(dataFilter);
 const portfolioItems = document.querySelectorAll(portfolioData);
-const searchBox = document.querySelector('#search');
+const searchBox = document.querySelector('search');
 
 let allCardsInfo = [
     { dataItem: 'web', imgSrc: './assets/images/portfolio-1.jpg', projectCategory: 'Web Development', projectTitle: 'Food Website' },
