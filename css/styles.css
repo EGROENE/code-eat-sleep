@@ -180,6 +180,10 @@
     color: #495fef;
 }
 
+#all-work-link {
+    color: #495fef;
+}
+
 .portfolio-grid {
     display: flex;
     flex-wrap: wrap;
