@@ -18,10 +18,12 @@ const portfolioData = '[data-item]';
 // var to store value of page root:
 const root = document.documentElement;
 
+
 // THEME
 const toggleTheme = document.querySelector(themeTab);
 const switcher = document.querySelectorAll(switcherBtn); // querySelectorAll returns all elements w/ given class & puts them into an array (like getElementsByClassName)
 const currentTheme = localStorage.getItem(theme); // theme that the user sets is saved
+
 
 // PORTFOLIO
 const filterLink = document.querySelectorAll(dataFilter);
@@ -59,6 +61,7 @@ const popCards = () => {
             + "</div>"
     }
 }
+
 
 // MODAL
 const openModal = document.querySelectorAll(modalOpen);
@@ -112,6 +115,7 @@ for (const elem of switcher) {
     })
 }
 
+// Display portfolio items based on search:
 searchBox.addEventListener('keyup', (eventObject) => {
     const searchInput = eventObject.target.value.toLowerCase().trim();
     portfolioItems.forEach((card) => {
@@ -123,6 +127,7 @@ searchBox.addEventListener('keyup', (eventObject) => {
     })
 })
 
+// Filter portfolio items based on user selection of links:
 for (const link of filterLink) {
     link.addEventListener('click', function() {
         setActive(link, '.filter-link');
