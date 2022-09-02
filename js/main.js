@@ -117,6 +117,7 @@ for (const elem of switcher) {
 }
 
 // Display portfolio items based on search:
+// KEEP COMMENTED-OUT CODE FROM JASON, JUST IN CASE
 /* searchBox.addEventListener('keyup', (eventObject) => {
     const searchInput = eventObject.target.value.toLowerCase().trim();
     portfolioItems.forEach((card) => {
@@ -130,6 +131,7 @@ for (const elem of switcher) {
 }) */
 
 // Filter portfolio items based on user selection of links:
+// KEEP COMMENTED-OUT CODE FROM JASON, JUST IN CASE
 /* for (const link of filterLink) {
     link.addEventListener('click', function() {
         setActive(link, '.filter-link');
