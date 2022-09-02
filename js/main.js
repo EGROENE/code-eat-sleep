@@ -180,7 +180,7 @@ for (const link of filterLink) {
     })
 }
 
-// Full site modal 'open buttons'
+// Modal/Full site modal 'open buttons'
 for (const elem of openModal) {
     elem.addEventListener('click', function() {
         const modalId = this.dataset.open; // this refers to parent element, which is elem here. It then accesses datasets that are followed by 'open'. Don't use arrow func here, so that this keyword works;
