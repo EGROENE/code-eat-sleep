@@ -288,8 +288,8 @@
     padding: 1rem;
     transition: all 0.35s ease-in;
     background: white;
-    visibility: hidden;
-    opacity: 0;
+    /* visibility: hidden;
+    opacity: 0; */
 }
 
 .modal-dialog {
