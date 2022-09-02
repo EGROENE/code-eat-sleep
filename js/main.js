@@ -28,7 +28,7 @@ const currentTheme = localStorage.getItem(theme); // theme that the user sets is
 // PORTFOLIO
 const filterLink = document.querySelectorAll(dataFilter);
 const portfolioItems = document.querySelectorAll(portfolioData);
-const searchBox = document.querySelector('#search');
+const searchBox = document.getElementById('search'); // formerly document.querySelector('#search')
 const portfolioCards = document.getElementsByClassName('portfolio-card');
 
 let allCardsInfo = [
@@ -129,6 +129,18 @@ for (const elem of switcher) {
         }
     })
 }) */
+
+searchBox.addEventListener('keyup', (eventObject) => {
+    const searchInput = eventObject.target.value.toLowerCase().trim();
+    console.log(searchInput);
+    for (const card of portfolioCards) {
+        if (card.dataset.item.includes(searchInput)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    }
+})
 
 // Filter portfolio items based on user selection of links:
 // KEEP COMMENTED-OUT CODE FROM JASON, JUST IN CASE
