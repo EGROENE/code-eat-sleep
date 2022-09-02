@@ -54,14 +54,14 @@ const popCards = () => {
             + "<div class='card-body'>"
             + "<img src='"
             + allCardsInfo[i].imgSrc + "' alt='portfolio-image'>"
-            + "<a href='#' class='card-popup-box'>"
+            + "<div class='card-popup-box'>"
             + "<div>"
             + allCardsInfo[i].projectCategory
             + "</div>"
             + "<h3>"
             + allCardsInfo[i].projectTitle
             + "</h3>"
-            + "</a>"
+            + "</div>"
             + "</div>"
             + "</div>"
     }
@@ -184,7 +184,7 @@ for (const link of filterLink) {
 for (const elem of openModal) {
     elem.addEventListener('click', function() {
         const modalId = this.dataset.open; // this refers to parent element, which is elem here. It then accesses datasets that are followed by 'open'. Don't use arrow func here, so that this keyword works;
-        document.getElementById(modalId).classList.add(isVisible); // this adds .is-visible as a class to everything in document with data-open="about"
+        document.getElementById(modalId).classList.add('is-visible'); // this adds .is-visible as a class to everything in document with data-open="about" or "contact"
     })
 }
 
