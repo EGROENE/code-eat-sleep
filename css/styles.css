@@ -302,18 +302,6 @@
     border-radius: 5px;
 }
 
-.img-wrapper {
-    max-width: 200px;
-    margin-right: 0.75rem;
-}
-
-.img-wrapper img {
-    width: 100%;
-    border-radius: 8px;
-    object-fit: cover;
-    height: 200px;
-}
-
 .modal-header {
     display: flex;
     padding-bottom: 1rem;
@@ -338,6 +326,18 @@
 .modal-body {
     display: flex;
     align-items: center;
+}
+
+.modal-body .img-wrapper {
+    max-width: 200px;
+    margin-right: 0.75rem;
+}
+
+.modal-body .img-wrapper img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    height: 200px;
 }
 
 [data-animation = "zoomInOut"].full-site-modal {
