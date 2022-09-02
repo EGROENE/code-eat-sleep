@@ -29,15 +29,16 @@ const currentTheme = localStorage.getItem(theme); // theme that the user sets is
 const filterLink = document.querySelectorAll(dataFilter);
 const portfolioItems = document.querySelectorAll(portfolioData);
 const searchBox = document.querySelector('#search');
+const portfolioCards = document.getElementsByClassName('portfolio-card');
 
 let allCardsInfo = [
     { dataItem: 'web', imgSrc: './assets/images/portfolio-1.jpg', projectCategory: 'Web Development', projectTitle: 'Food Website' },
     { dataItem: 'web', imgSrc: './assets/images/portfolio-2.jpg', projectCategory: 'Web Development', projectTitle: 'Skate Website' },
     { dataItem: 'web', imgSrc: './assets/images/portfolio-3.jpg', projectCategory: 'Web Development', projectTitle: 'A Shopping Website' },
     { dataItem: 'ui', imgSrc: './assets/images/portfolio-4.jpg', projectCategory: 'UI Design', projectTitle: 'Dope Design' },
-    { dataItem: 'web', imgSrc: './assets/images/portfolio-5.jpg', projectCategory: 'App Development', projectTitle: 'Game App' },
+    { dataItem: 'app', imgSrc: './assets/images/portfolio-5.jpg', projectCategory: 'App Development', projectTitle: 'Game App' },
     { dataItem: 'app', imgSrc: './assets/images/portfolio-7.jpg', projectCategory: 'App Development', projectTitle: 'Gambling App' },
-    { dataItem: 'web', imgSrc: './assets/images/portfolio-6.jpg', projectCategory: 'App Development', projectTitle: 'Money App' },
+    { dataItem: 'app', imgSrc: './assets/images/portfolio-6.jpg', projectCategory: 'App Development', projectTitle: 'Money App' },
     { dataItem: 'ui', imgSrc: './assets/images/portfolio-8.jpg', projectCategory: 'UI Design', projectTitle: 'Fantastical Design' }
 ]
 // Function to populate HTML, based on array of info above:
@@ -129,7 +130,7 @@ for (const elem of switcher) {
 }) */
 
 // Filter portfolio items based on user selection of links:
-for (const link of filterLink) {
+/* for (const link of filterLink) {
     link.addEventListener('click', function() {
         setActive(link, '.filter-link');
         const filter = this.dataset.filter;
@@ -143,6 +144,21 @@ for (const link of filterLink) {
                 card.style.display = 'none';
             }
         })
+    })
+} */
+
+for (const link of filterLink) {
+    link.addEventListener('click', function() {
+        setActive(link, '.filter-link');
+        for (const card of portfolioCards) {
+            if (link.dataset.filter === card.dataset.item) {
+                card.style.display = 'block';
+            } else if (link.dataset.filter === 'all') {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        }
     })
 }
 
