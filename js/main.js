@@ -32,21 +32,25 @@ const searchBox = document.getElementById('search'); // formerly document.queryS
 const portfolioCards = document.getElementsByClassName('portfolio-card');
 
 let allCardsInfo = [
-    { dataItem: 'web', imgSrc: './assets/images/portfolio-1.jpg', projectCategory: 'Web Development', projectTitle: 'Food Website' },
-    { dataItem: 'web', imgSrc: './assets/images/portfolio-2.jpg', projectCategory: 'Web Development', projectTitle: 'Skate Website' },
-    { dataItem: 'web', imgSrc: './assets/images/portfolio-3.jpg', projectCategory: 'Web Development', projectTitle: 'A Shopping Website' },
-    { dataItem: 'ui', imgSrc: './assets/images/portfolio-4.jpg', projectCategory: 'UI Design', projectTitle: 'Dope Design' },
-    { dataItem: 'app', imgSrc: './assets/images/portfolio-5.jpg', projectCategory: 'App Development', projectTitle: 'Game App' },
-    { dataItem: 'app', imgSrc: './assets/images/portfolio-7.jpg', projectCategory: 'App Development', projectTitle: 'Gambling App' },
-    { dataItem: 'app', imgSrc: './assets/images/portfolio-6.jpg', projectCategory: 'App Development', projectTitle: 'Money App' },
-    { dataItem: 'ui', imgSrc: './assets/images/portfolio-8.jpg', projectCategory: 'UI Design', projectTitle: 'Fantastical Design' }
+    { dataItem: 'web', dataOpen: 'project-one', imgSrc: './assets/images/portfolio-1.jpg', projectCategory: 'Web Development', projectTitle: 'Food Website' },
+    { dataItem: 'web', dataOpen: 'project-two', imgSrc: './assets/images/portfolio-2.jpg', projectCategory: 'Web Development', projectTitle: 'Skate Website' },
+    { dataItem: 'web', dataOpen: 'project-three', imgSrc: './assets/images/portfolio-3.jpg', projectCategory: 'Web Development', projectTitle: 'A Shopping Website' },
+    { dataItem: 'ui', dataOpen: 'project-four', imgSrc: './assets/images/portfolio-4.jpg', projectCategory: 'UI Design', projectTitle: 'Dope Design' },
+    { dataItem: 'app', dataOpen: 'project-five', imgSrc: './assets/images/portfolio-5.jpg', projectCategory: 'App Development', projectTitle: 'Game App' },
+    { dataItem: 'app', dataOpen: 'project-six', imgSrc: './assets/images/portfolio-7.jpg', projectCategory: 'App Development', projectTitle: 'Gambling App' },
+    { dataItem: 'app', dataOpen: 'project-seven', imgSrc: './assets/images/portfolio-6.jpg', projectCategory: 'App Development', projectTitle: 'Money App' },
+    { dataItem: 'ui', dataOpen: 'project-eight', imgSrc: './assets/images/portfolio-8.jpg', projectCategory: 'UI Design', projectTitle: 'Fantastical Design' }
 ]
 // Function to populate HTML, based on array of info above:
 const popCards = () => {
     for (let i = 0; i < allCardsInfo.length; i++) {
         document.getElementById('portfolio-grid').innerHTML +=
             "<div class='portfolio-card' data-item="
-            + allCardsInfo[i].dataItem + ">"
+            + allCardsInfo[i].dataItem 
+            + ' '
+            + "data-open="
+            + allCardsInfo[i].dataOpen
+            + ">"
             + "<div class='card-body'>"
             + "<img src='"
             + allCardsInfo[i].imgSrc + "' alt='portfolio-image'>"
