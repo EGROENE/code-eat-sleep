@@ -299,6 +299,7 @@
     color: var(--color-text-base);
     overflow: hidden;
     padding: 1.25rem 1.85rem;
+    border-radius: 5px;
 }
 
 .img-wrapper {
