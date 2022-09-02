@@ -317,3 +317,9 @@
 [data-animation = "zoomInOut"].full-site-modal.is-visible {
     transform: none;
 }
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
