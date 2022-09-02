@@ -292,6 +292,15 @@
     opacity: 0;
 }
 
+.modal-dialog {
+    max-width: 800px;
+    max-height: 80vh;
+    background: var(--bg-panel);
+    color: var(--color-text-base);
+    overflow: hidden;
+    padding: 1.25rem 1.85rem;
+}
+
 .modal-header {
     display: flex;
     padding-bottom: 1rem;
