@@ -187,6 +187,6 @@ for (const elem of openModal) {
 // Remove isVisible class from elements in HTML with data-close attribute upon click:
 for (const elem of closeModal) {
     elem.addEventListener('click', function() {
-        this.parentElement.parentElement.classList.remove(isVisible);
+        this.parentElement.parentElement.parentElement.classList.remove(isVisible);
     })
 }
