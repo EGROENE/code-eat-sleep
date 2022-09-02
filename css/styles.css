@@ -271,6 +271,14 @@
     text-transform: lowercase;
 }
 
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.8);
+}
+
+.modal, 
 .full-site-modal {
     position: fixed;
     top: 0;
@@ -316,10 +324,4 @@
 
 [data-animation = "zoomInOut"].full-site-modal.is-visible {
     transform: none;
-}
-
-.modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
