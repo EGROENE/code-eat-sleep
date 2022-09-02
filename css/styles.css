@@ -317,7 +317,8 @@
     cursor: pointer;
 }
 
-.full-site-modal.is-visible {
+.full-site-modal.is-visible,
+.modal.is-visible {
     visibility: visible;
     opacity: 1;
 }
