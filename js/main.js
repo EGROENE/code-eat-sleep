@@ -45,7 +45,7 @@ let allCardsInfo = [
 const popCards = () => {
     for (let i = 0; i < allCardsInfo.length; i++) {
         document.getElementById('portfolio-grid').innerHTML +=
-            "<div onclick='addIsVisible()' class='portfolio-card' data-item="
+            "<div' class='portfolio-card' data-item="
             + allCardsInfo[i].dataItem 
             + ' '
             + "data-open="
@@ -54,7 +54,7 @@ const popCards = () => {
             + "<div class='card-body'>"
             + "<img src='"
             + allCardsInfo[i].imgSrc + "' alt='portfolio-image'>"
-            + "<div class='card-popup-box'>"
+            + "<div onclick='addIsVisible()' class='card-popup-box'>"
             + "<div>"
             + allCardsInfo[i].projectCategory
             + "</div>"
