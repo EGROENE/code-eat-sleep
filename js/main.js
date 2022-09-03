@@ -32,14 +32,14 @@ const searchBox = document.getElementById('search'); // formerly document.queryS
 const portfolioCards = document.getElementsByClassName('portfolio-card');
 
 let allCardsInfo = [
-    { dataItem: 'web', dataOpen: 'project-one', imgSrc: './assets/images/portfolio-1.jpg', projectCategory: 'Web Development', projectTitle: 'Food Website' },
-    { dataItem: 'web', dataOpen: 'project-two', imgSrc: './assets/images/portfolio-2.jpg', projectCategory: 'Web Development', projectTitle: 'Skate Website' },
-    { dataItem: 'web', dataOpen: 'project-three', imgSrc: './assets/images/portfolio-3.jpg', projectCategory: 'Web Development', projectTitle: 'A Shopping Website' },
-    { dataItem: 'ui', dataOpen: 'project-four', imgSrc: './assets/images/portfolio-4.jpg', projectCategory: 'UI Design', projectTitle: 'Dope Design' },
-    { dataItem: 'app', dataOpen: 'project-five', imgSrc: './assets/images/portfolio-5.jpg', projectCategory: 'App Development', projectTitle: 'Game App' },
-    { dataItem: 'app', dataOpen: 'project-six', imgSrc: './assets/images/portfolio-7.jpg', projectCategory: 'App Development', projectTitle: 'Gambling App' },
-    { dataItem: 'app', dataOpen: 'project-seven', imgSrc: './assets/images/portfolio-6.jpg', projectCategory: 'App Development', projectTitle: 'Money App' },
-    { dataItem: 'ui', dataOpen: 'project-eight', imgSrc: './assets/images/portfolio-8.jpg', projectCategory: 'UI Design', projectTitle: 'Fantastical Design' }
+    { dataItem: 'web', dataOpen: 'project-one', dataID: 'project-one', imgSrc: './assets/images/portfolio-1.jpg', projectCategory: 'Web Development', projectTitle: 'Food Website' },
+    { dataItem: 'web', dataOpen: 'project-two', dataID: 'project-two', imgSrc: './assets/images/portfolio-2.jpg', projectCategory: 'Web Development', projectTitle: 'Skate Website' },
+    { dataItem: 'web', dataOpen: 'project-three', dataID: 'project-three', imgSrc: './assets/images/portfolio-3.jpg', projectCategory: 'Web Development', projectTitle: 'A Shopping Website' },
+    { dataItem: 'ui', dataOpen: 'project-four', dataID: 'project-four', imgSrc: './assets/images/portfolio-4.jpg', projectCategory: 'UI Design', projectTitle: 'Dope Design' },
+    { dataItem: 'app', dataOpen: 'project-five', dataID: 'project-five', imgSrc: './assets/images/portfolio-5.jpg', projectCategory: 'App Development', projectTitle: 'Game App' },
+    { dataItem: 'app', dataOpen: 'project-six', dataID: 'project-six', imgSrc: './assets/images/portfolio-7.jpg', projectCategory: 'App Development', projectTitle: 'Gambling App' },
+    { dataItem: 'app', dataOpen: 'project-seven', dataID: 'project-seven', imgSrc: './assets/images/portfolio-6.jpg', projectCategory: 'App Development', projectTitle: 'Money App' },
+    { dataItem: 'ui', dataOpen: 'project-eight', dataID: 'project-eight', imgSrc: './assets/images/portfolio-8.jpg', projectCategory: 'UI Design', projectTitle: 'Fantastical Design' }
 ]
 // Function to populate HTML, based on array of info above:
 const popCards = () => {
@@ -50,11 +50,14 @@ const popCards = () => {
             + ' '
             + "data-open="
             + allCardsInfo[i].dataOpen
+            + ' '
+            + "id="
+            + allCardsInfo[i].dataID
             + ">"
             + "<div class='card-body'>"
             + "<img src='"
             + allCardsInfo[i].imgSrc + "' alt='portfolio-image'>"
-            + "<div onclick='addIsVisible()' class='card-popup-box'>"
+            + "<div onclick='openItemModal()' class='card-popup-box'>"
             + "<div>"
             + allCardsInfo[i].projectCategory
             + "</div>"
@@ -186,22 +189,6 @@ for (const elem of openModal) {
         const modalId = this.dataset.open; // this refers to parent element, which is elem here. It then accesses datasets that are followed by 'open'. Don't use arrow func here, so that this keyword works;
         document.getElementById(modalId).classList.add(isVisible); // this adds .is-visible as a class to everything in document with data-open="about" or "contact"
     })
-}
-
-// Add .is-visible to pf card modals:
-const addIsVisible = () => {
-    let pfModals = document.getElementsByClassName('modal');
-    for (const modal of pfModals) {
-        /* for (const card of portfolioCards) {
-            if (modal.id === card.data.open) {
-                modal.style.visibility = 'visible';
-                modal.style.opacity = '1';
-            }
-        } */
-        /* modal.style.visibility = 'visible';
-        modal.style.opacity = '1'; */
-        modal.classList.add(isVisible);
-    }
 }
 
 // Remove isVisible class from elements in HTML with data-close attribute upon click:
