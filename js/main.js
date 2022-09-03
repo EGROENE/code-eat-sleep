@@ -45,7 +45,7 @@ let allCardsInfo = [
 const popCards = () => {
     for (let i = 0; i < allCardsInfo.length; i++) {
         document.getElementById('portfolio-grid').innerHTML +=
-            "<div class='portfolio-card' data-item="
+            "<div onclick='addIsVisible()' class='portfolio-card' data-item="
             + allCardsInfo[i].dataItem 
             + ' '
             + "data-open="
@@ -186,6 +186,22 @@ for (const elem of openModal) {
         const modalId = this.dataset.open; // this refers to parent element, which is elem here. It then accesses datasets that are followed by 'open'. Don't use arrow func here, so that this keyword works;
         document.getElementById(modalId).classList.add(isVisible); // this adds .is-visible as a class to everything in document with data-open="about" or "contact"
     })
+}
+
+// Add .is-visible to pf card modals:
+const addIsVisible = () => {
+    let pfModals = document.getElementsByClassName('modal');
+    for (const modal of pfModals) {
+        /* for (const card of portfolioCards) {
+            if (modal.id === card.data.open) {
+                modal.style.visibility = 'visible';
+                modal.style.opacity = '1';
+            }
+        } */
+        /* modal.style.visibility = 'visible';
+        modal.style.opacity = '1'; */
+        modal.classList.add(isVisible);
+    }
 }
 
 // Remove isVisible class from elements in HTML with data-close attribute upon click:
