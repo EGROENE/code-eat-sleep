@@ -46,15 +46,11 @@ const popCards = () => {
     for (let i = 0; i < allCardsInfo.length; i++) {
         document.getElementById('portfolio-grid').innerHTML +=
             "<div' class='portfolio-card' data-item="
-            + allCardsInfo[i].dataItem 
-            + ' '
-            + "id="
-            + allCardsInfo[i].dataID
-            + ">"
+            + allCardsInfo[i].dataItem + ">"
             + "<div class='card-body'>"
             + "<img src='"
             + allCardsInfo[i].imgSrc + "' alt='portfolio-image'>"
-            + "<div data-open='" + allCardsInfo[i].dataOpen + "'" + "class='card-popup-box'>"
+            + "<div onclick='displayProjectOneModal()' data-open='" + allCardsInfo[i].dataOpen + "'" + "class='card-popup-box'>"
             + "<div>"
             + allCardsInfo[i].projectCategory
             + "</div>"
@@ -186,6 +182,12 @@ for (const elem of openModal) {
         const modalId = this.dataset.open; // this refers to parent element, which is elem here. It then accesses datasets that are followed by 'open'. Don't use arrow func here, so that this keyword works;
         document.getElementById(modalId).classList.add(isVisible); // this adds .is-visible as a class to everything in document with data-open="about" or "contact"
     })
+}
+
+// Functions, each making a certain pf item modal visible:
+// Functions should be in iterable array, with first item in allCardsInfo array corresponding to first item, etc., in the array of functions in string form
+const displayProjectOneModal = () => {
+    document.getElementById('project-one').classList.add(isVisible);
 }
 
 // Remove isVisible class from elements in HTML with data-close attribute upon click:
