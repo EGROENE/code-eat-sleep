@@ -48,16 +48,13 @@ const popCards = () => {
             "<div' class='portfolio-card' data-item="
             + allCardsInfo[i].dataItem 
             + ' '
-            + "data-open="
-            + allCardsInfo[i].dataOpen
-            + ' '
             + "id="
             + allCardsInfo[i].dataID
             + ">"
             + "<div class='card-body'>"
             + "<img src='"
             + allCardsInfo[i].imgSrc + "' alt='portfolio-image'>"
-            + "<div onclick='openItemModal()' class='card-popup-box'>"
+            + "<div data-open='" + allCardsInfo[i].dataOpen + "'" + "class='card-popup-box'>"
             + "<div>"
             + allCardsInfo[i].projectCategory
             + "</div>"
