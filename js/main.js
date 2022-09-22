@@ -50,7 +50,7 @@ const popCards = () => {
             + "<div class='card-body'>"
             + "<img src='"
             + allCardsInfo[i].imgSrc + "' alt='portfolio-image'>"
-            + "<div onclick='displayProjectOneModal()' data-open='" + allCardsInfo[i].dataOpen + "'" + "class='card-popup-box'>"
+            + "<div onclick='displayModalProject" + (i + 1) + "()" + "'data-open='" + allCardsInfo[i].dataOpen + "'" + "class='card-popup-box'>"
             + "<div>"
             + allCardsInfo[i].projectCategory
             + "</div>"
@@ -186,8 +186,29 @@ for (const elem of openModal) {
 
 // Functions, each making a certain pf item modal visible:
 // Functions should be in iterable array, with first item in allCardsInfo array corresponding to first item, etc., in the array of functions in string form
-const displayProjectOneModal = () => {
+const displayModalProject1 = () => {
     document.getElementById('project-one').classList.add(isVisible);
+}
+const displayModalProject2 = () => {
+    document.getElementById('project-two').classList.add(isVisible);
+}
+const displayModalProject3 = () => {
+    document.getElementById('project-three').classList.add(isVisible);
+}
+const displayModalProject4 = () => {
+    document.getElementById('project-four').classList.add(isVisible);
+}
+const displayModalProject5 = () => {
+    document.getElementById('project-five').classList.add(isVisible);
+}
+const displayModalProject6 = () => {
+    document.getElementById('project-six').classList.add(isVisible);
+}
+const displayModalProject7 = () => {
+    document.getElementById('project-seven').classList.add(isVisible);
+}
+const displayModalProject8 = () => {
+    document.getElementById('project-eight').classList.add(isVisible);
 }
 
 // Remove isVisible class from elements in HTML with data-close attribute upon click:
