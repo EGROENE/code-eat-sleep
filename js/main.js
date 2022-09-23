@@ -184,8 +184,9 @@ for (const elem of openModal) {
     })
 }
 
+// MY WORKAROUND SOLUTION
 // Functions, each making a certain pf item modal visible:
-// Functions should be in iterable array, with first item in allCardsInfo array corresponding to first item, etc., in the array of functions in string form
+// Functions maybe should be in iterable array, with first item in allCardsInfo array corresponding to first item, etc., in the array of functions in string form
 const displayModalProject1 = () => {
     document.getElementById('project-one').classList.add(isVisible);
 }
