@@ -50,6 +50,7 @@ const popCards = () => {
             + "<div class='card-body'>"
             + "<img src='"
             + allCardsInfo[i].imgSrc + "' alt='portfolio-image'>"
+            // Line below calls function for each individual modal that should appear when portfolio item is clicked:
             + "<div onclick='displayModalProject" + (i + 1) + "()" + "'data-open='" + allCardsInfo[i].dataOpen + "'" + "class='card-popup-box'>"
             + "<div>"
             + allCardsInfo[i].projectCategory
