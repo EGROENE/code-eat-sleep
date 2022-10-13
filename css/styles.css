@@ -276,6 +276,7 @@
     justify-content: center;
     align-items: center;
     background: rgba(0,0,0,0.8);
+    cursor: pointer;
 }
 
 .modal, 
@@ -300,6 +301,7 @@
     overflow: hidden;
     padding: 1.25rem 1.85rem;
     border-radius: 5px;
+    cursor: default;
 }
 
 .modal-header {
