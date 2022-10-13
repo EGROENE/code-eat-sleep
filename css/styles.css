@@ -354,3 +354,23 @@
 [data-animation = "zoomInOut"].full-site-modal.is-visible {
     transform: none;
 }
+
+/* ANIMATION FOR PF ITEM MODALS */
+[data-animation="slideInOutTop"] .modal-dialog {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+[data-animation="slideInOutTop"].is-visible .modal-dialog {
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+[data-animation="slideInOutTop"] .modal-dialog {
+    transform: translateY(-100%);
+}
+
+[data-animation="zoomInOut"].full-site-modal.is-visible,
+[data-animation="slideInOutTop"].is-visible .modal-dialog {
+    transform: none;
+}
