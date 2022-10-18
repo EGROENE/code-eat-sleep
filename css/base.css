@@ -1,3 +1,12 @@
+:root {
+    --marquee-width: 80vw;
+    --marquee-height: 15vh;
+    --marquee-elems-displayed: 5;
+    --marquee-elems-width: calc(var(--marquee-width) / var(--marquee-elems-displayed));
+    /* --marquee-elems to be assigned in JS */
+    --marquee-duration-animation: calc(var(--marquee-elems) * 3s);
+}
+
 section,
 footer,
 header,
