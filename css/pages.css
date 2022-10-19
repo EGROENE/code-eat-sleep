@@ -34,12 +34,15 @@
     height: var(--marquee-height);
     overflow: hidden;
     margin: 2rem auto;
+    position: relative;
 }
 
 .marquee-content {
     list-style: none;
+    padding-left: 0;
     display: flex;
     height: 100%;
+    animation: scrolling var(--marquee-duration-animation) linear infinite;
 }
 
 .marquee-content li {
@@ -72,4 +75,11 @@
 .marquee::after {
     right: 0;
     background: linear-gradient(to left, var(--bg) 0%, transparent 100%);
+}
+
+/* Animate Marquee */
+/* 'scrolling' is the name of the animation */
+@keyframes scrolling {
+    0% { transform: translateX(0); } /* Starting point */
+    100% { transform: translateX(calc(-1 * var(--marquee-elems-width) * var(--marquee-elems))) }
 }
