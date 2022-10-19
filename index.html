@@ -252,7 +252,7 @@
                         <img src="./assets/images/img4.jpg" alt="headshot">
                     </div>
                     <div class="about-text"> 
-                        <h2>Ethan Groene</h2>
+                        <h2 class="header-md">Ethan Groene</h2>
                         <p>Full-Stack Developer based on Planet Earth. Nobody can see how elegant my code is, so I snapshot it, frame it, and hang it on my wall.</p>
                         <p>I like my code like I like my women - lean. Actually, I like my code to be even leaner.</p>
                         <div class="contact-me-block">
@@ -285,16 +285,18 @@
                     <i class="fas fa-times" data-close></i>
                 </header>
                 <div class="modal-body">
-                    <div class="img-wrapper">
-                        <img src="./assets/images/img4.jpg" alt="headshot">
+                    <div class="contact-text">
+                        <h2 class="header-md">Ethan Groene</h2>
+                        <div>Have a project or question? Send me a message!</div>
+                        <div>I'll reply within 48 hours.</div>
                     </div>
-                    <h2>Ethan Groene</h2>
-                    <p>text 1</p>
-                    <p>text 2</p>
-                    <div>
-                        <div>Email Me</div>
-                        <a href="mailto: ethangroene@gmail.com">ethangroene@gmail.com</a>
-                    </div>
+                    <form action="#">
+                        <input name="name" type="text" placeholder="Name">
+                        <input name="email" type="email" placeholder="Email">
+                        <input name="subject" type="subject" placeholder="Subject">
+                        <textarea name="message" cols="30" rows="3" placeholder="Write your message"></textarea>
+                        <input type="submit" value="Send" class="btn-primary round-pill">
+                    </form>
                 </div>
             </div>
         </div>
