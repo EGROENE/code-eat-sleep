@@ -219,3 +219,19 @@ for (const elem of closeModal) {
         this.parentElement.parentElement.parentElement.classList.remove(isVisible);
     })
 }
+
+// MAKE MARQUEE ANIMATION ENDLESS
+// get elements displayed:
+const elemsDisplayed = getComputedStyle(root).getPropertyValue('--marquee-elems-displayed'); 
+// getComputedStyle accesses a CSS style object. getPropertyValue accesses a property of that style object.
+
+const marqueeContent = document.querySelector('ul.marquee-content');
+
+root.style.setProperty('--marquee-elems', marqueeContent.children.length); // counts children of .marquee-content (ul), which is 10 here
+// setProperty adds a property and sets it to a value (--marquee-elems set to # of children inside the ul w/ class marquee-content)
+
+// for every element displayed (# was defined in CSS), each child in .marquee-content is cloned
+// I think this is so that after the last logo runs its course, the first one follows it again, and so on, so it's a truly endless conveyor belt of logos.
+for (let i = 0; i < elemsDisplayed; i++) {
+    marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true)); // make clone of li in ul .marquee-content
+}
